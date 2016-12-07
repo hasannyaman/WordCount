@@ -1,0 +1,33 @@
+import java.util.*;
+public class wordCount {
+	public static void main(String[] args) {
+		Scanner console=new Scanner(System.in);
+		int a=wordCount(console);
+		System.out.println(a);
+	}
+	public static int wordCount(Scanner console) {
+		String given=console.nextLine();
+		int count=1;
+		String z="";
+		String y="";
+		if(given.equals(" ")) {
+			return 0;
+		}
+		for(int i=0;i<=given.length()-2;i++) {
+			y=""+given.charAt(i);
+			z=""+given.charAt(i+1);
+			if(!y.equals(" ")) {
+				if(!z.equals(" ")) {
+				} else {
+					count++;
+				}
+			}
+		}
+		String x=""+given.charAt(given.length()-1);
+		if(x.equals(" ")) {
+			count--;
+		}
+		return count;
+	}
+
+}
